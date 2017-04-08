@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    
+		<link href="css/style.css" rel="stylesheet">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+
+		<script type="text/javascript" src="js/vue.js"></script>
+	</head>
+	<body>
+		<div id="app">
+
+			<chsy-bottom-menu></chsy-bottom-menu>
+		</div>
+	</body>
+</html>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+	Vue.component('chsy-bottom-menu', {
+		template : "<div class='bottom-menu'>" + 
+				   	  "<div class='bottom-sub-menu menu1' @click='transition(1)'><span class='glyphicon glyphicon-search' aria-hidden='true'></span></div>" +
+				   	  "<div class='bottom-sub-menu menu2' @click='transition(2)''><span class='glyphicon glyphicon-record' aria-hidden='true'></span></div>" +
+				   	  "<div class='bottom-sub-menu menu3' @click='transition(3)''><span class='glyphicon glyphicon-user' aria-hidden='true'></span></div>" +
+				   "</div>",
+		methods : {
+			test : function (n) {
+				console.log(n)
+			}
+		}
+	});
+	new Vue({
+		el: "#app"
+	})
+</script>
